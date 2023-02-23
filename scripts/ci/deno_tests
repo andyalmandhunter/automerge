@@ -10,7 +10,9 @@ echo "building wasm and js"
 yarn --cwd $E2E_PROJECT install;
 yarn --cwd $E2E_PROJECT e2e buildjs;
 cp $WASM_PROJECT/index.d.ts $WASM_PROJECT/deno/;
-sed -i '1i /// <reference types="./index.d.ts" />' $WASM_PROJECT/deno/automerge_wasm.js;
+sed -i'' -e '1i\
+/// <reference types="./index.d.ts" />
+' $WASM_PROJECT/deno/automerge_wasm.js;
 
 echo "Running Wasm Deno tests";
 deno test $WASM_PROJECT/deno-tests/deno.ts --allow-read;
