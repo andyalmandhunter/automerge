@@ -107,8 +107,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# install cmake, node, cmocka
-brew install cmake node cmocka
+# install cmake, node, cmocka, deno
+brew install cmake node cmocka deno
 
 # install yarn
 npm install --global yarn
