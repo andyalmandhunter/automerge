@@ -127,7 +127,7 @@ rustup component add rust-src --toolchain nightly
 rustup target add wasm32-unknown-unknown
 
 # Run ci script
-./scripts/ci/run
+RUSTUP_TOOLCHAIN=nightly ./scripts/ci/run
 ```
 
 If your build fails to find `cmocka.h` you may need to teach it about homebrew's
