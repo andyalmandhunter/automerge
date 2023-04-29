@@ -124,7 +124,7 @@ rustup toolchain install nightly
 rustup component add rust-src --toolchain nightly
 
 # add wasm target in addition to current architecture
-rustup target add wasm32-unknown-unknown
+rustup target add wasm32-unknown-unknown --toolchain nightly
 
 # Run ci script
 RUSTUP_TOOLCHAIN=nightly ./scripts/ci/run
